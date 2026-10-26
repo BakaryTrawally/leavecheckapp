@@ -4,15 +4,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const personnelLeaveUrl = require("./routes/leave");
-// const leaveUrl = require("./routes/leaves");
-// const loginUrl = require("./routes/login");
-// const trainingUrl = require("./routes/trainingLog");
-
 // dotenv.config()
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin:"https://leavecheckapp-1.onrender.com"
+
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
