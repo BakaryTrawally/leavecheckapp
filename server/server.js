@@ -8,10 +8,7 @@ const personnelLeaveUrl = require("./routes/leave");
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin:"https://leavecheckapp-1.onrender.com"
-
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
