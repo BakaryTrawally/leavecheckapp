@@ -146,7 +146,7 @@ justify-center
     min={0}
     value={searchId}
     onChange={(e)=>setSearchId(e.target.value)}
-    placeholder="Enter OPS Number e.g 106"
+    placeholder="Enter your OPS E.G 332"
     className="
     w-full
     border
