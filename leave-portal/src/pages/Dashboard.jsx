@@ -161,8 +161,8 @@ justify-center
     className="
     mt-4
     w-full
-    bg-gray-300
-    hover:bg-gray-500
+    bg-gray-500
+    hover:bg-gray-700
     text-white
     p-2
     rounded-md
