@@ -31,8 +31,6 @@ const LeaveCard = ({ leave }) => {
 
     const status = getLeaveStatus(leave);
 
-
-
     const active = leave.status === "Active";
     return (
 
@@ -46,7 +44,7 @@ const LeaveCard = ({ leave }) => {
             border-2
             shadow-md
             border-none            `}
-            
+
         >
             {/* Header */}
 
@@ -76,13 +74,12 @@ const LeaveCard = ({ leave }) => {
                     text-white
                     font-semibold
                     shadow-lg
-                    ${
-                        status.color
-                    }
+                    ${status.color
+                        }
                     `}
                 >
 
-                    <CheckCircle size={18}/>
+                    <CheckCircle size={18} />
 
                     {status.text}
 
@@ -108,7 +105,7 @@ const LeaveCard = ({ leave }) => {
 
                 <div className="mt-5 flex items-center gap-3">
 
-                    <CalendarDays className="text-blue-600"/>
+                    <CalendarDays className="text-blue-600" />
 
                     <div>
 
@@ -128,7 +125,7 @@ const LeaveCard = ({ leave }) => {
                 {/* Resuming Date */}
 
                 <div className="mt-5 flex items-center gap-3">
-                 <CalendarDays className="text-blue-600"/>
+                    <CalendarDays className="text-blue-600" />
 
                     <p className="text-gray-500 text-sm">
                         Resuming Date
@@ -144,7 +141,7 @@ const LeaveCard = ({ leave }) => {
                 {/* Duration */}
 
                 <div className="mt-5 flex items-center gap-3">
-                <CalendarDays className="text-blue-600"/>
+                    <CalendarDays className="text-blue-600" />
                     <p className="text-gray-500 text-sm">
                         Leave Duration
                     </p>
