@@ -1,39 +1,11 @@
 // import {BrowserRouter, Routes, Route} from "react-router-dom";
-// import "./index.css";
-// import Login from "./pages/Login";
-// import Dashboard from "./pages/Dashboard";
-// import Form  from "./pages/Form"
-// import ViewData from "./pages/ViewData";
-
-
-// function App(){
-
-// return (
-//     <BrowserRouter>
-//     <Routes>
-//     <Route 
-//     path="/#" 
-//     element={<Login/>}
-//     />
-//     <Route 
-//     path="/" 
-//     element={<Dashboard/>}
-//     />
-//             <Route
-//                 path="/form"
-//                 element={<Form />}
-//             />
-//             <Route
-//                 path="/viewdata"
-//                 element={<ViewData />}
-//             />
-//     </Routes>
-//     </BrowserRouter>
-// )
-// }
-// export default App;
-
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React from "react";
+import {
+    HashRouter,
+    Routes,
+    Route,
+    Navigate
+} from "react-router-dom";
 
 import "./index.css";
 
@@ -44,7 +16,7 @@ import ViewData from "./pages/ViewData";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
 
                 <Route path="/" element={<Dashboard />} />
@@ -55,11 +27,13 @@ function App() {
 
                 <Route path="/viewdata" element={<ViewData />} />
 
-                {/* Handle unknown routes */}
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route
+                    path="*"
+                    element={<Navigate to="/" replace />}
+                />
 
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
