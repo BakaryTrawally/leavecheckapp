@@ -227,9 +227,9 @@ function Dashboard() {
 
           // INITIAL MESSAGE
           <p className="text-center text-gray-500">
-            Enter OPS Number to view leave details.
+            Enter OPS Number to view leave--
+            <a href="/#form">details.</a>
           </p>
-
         )}
 
       </div>
