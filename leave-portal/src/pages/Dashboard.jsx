@@ -213,7 +213,7 @@ function Dashboard() {
               No Leave Record Found!
             </h3>
 
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-gray-700 text-sm mt-2">
               There is no leave for this individual.
             </p>
 
