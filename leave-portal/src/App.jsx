@@ -1,4 +1,3 @@
-// import {BrowserRouter, Routes, Route} from "react-router-dom";
 import React from "react";
 import {
     HashRouter,
@@ -18,15 +17,10 @@ function App() {
     return (
         <HashRouter>
             <Routes>
-
                 <Route path="/" element={<Dashboard />} />
-
                 <Route path="/login" element={<Login />} />
-
                 <Route path="/form" element={<Form />} />
-
                 <Route path="/viewdata" element={<ViewData />} />
-
                 <Route
                     path="*"
                     element={<Navigate to="/" replace />}
