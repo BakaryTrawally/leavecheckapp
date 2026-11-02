@@ -55,7 +55,7 @@ function Dashboard() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 60000); // 60000ms = 1 minute
+    }, 30000); // 60000ms = 1 minute
     return () => clearInterval(interval); // cleanup
   }, []);
 
