@@ -1,6 +1,15 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import LeaveCard from "../components/LeaveCard";
 import { FormContext } from "../FormContext";
+import bg1 from "./images/airstrike.jpg";
+import bg2 from "./images/birdsStrike.jpg"
+import bg3 from "./images/Airside.jpg"
+import bg4 from "./images/Airside2.jpg"
+import bg5 from "./images/bjlAirdSide3.jpg"
+import bg6 from "./images/Airport.jpg"
+import bg7 from "./images/bnjlAirSide.jpg"
+import bg8 from "./images/airstrike.jpg"
+import bg9 from "./images/images.jpg"
 
 function Dashboard() {
   const [searchId, setSearchId] = useState("");
@@ -23,7 +32,7 @@ function Dashboard() {
       return;
     }
 
-    console.log("Searching for OPS:", opsNumber);
+    // console.log("Searching for OPS:", opsNumber);
 
     // Find matching OPS number
     const result = leaveRecords.find(
@@ -31,16 +40,37 @@ function Dashboard() {
         String(leave.ops).trim() === opsNumber
     );
 
-    console.log("Search result:", result);
+    // console.log("Search result:", result);
 
     // Update search results
     setSelectedLeave(result || null);
     setHasSearched(true);
   };
 
-  return (
-    <div className="min-h-screen bg-gray-100 p-5 flex justify-center">
+  // background images 
+  const [index, setIndex] = useState(0);
 
+  const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 60000); // 60000ms = 1 minute
+    return () => clearInterval(interval); // cleanup
+  }, []);
+
+
+
+  return (
+    <div
+      className="min-h-screen bg-gray-300 p-5  flex justify-center"
+      style={{
+        backgroundImage: `url(${images[index]})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="w-full max-w-md">
 
         {/* SEARCH SECTION */}

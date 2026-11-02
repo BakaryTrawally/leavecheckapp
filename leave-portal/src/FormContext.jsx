@@ -39,8 +39,7 @@ export const FormProvider = ({ children }) => {
         setProceedingDate('');
         setResumingDate('');
         setWorkingDays('');
-    }        
-   
+    }
 
     const fetchTrainingData = async () => {
         try {
@@ -87,19 +86,19 @@ export const FormProvider = ({ children }) => {
             value={{
                 formData,
                 setFormData,
-                name, 
+                name,
                 setName,
-                ops, 
-                setOps,                 
+                ops,
+                setOps,
                 proceedingDate,
                 setProceedingDate,
                 resumingDate,
                 setResumingDate,
                 workingDays,
-                setWorkingDays,    
+                setWorkingDays,
                 handleSubmit,
                 status
-                       
+
             }}
         >
             {children}
