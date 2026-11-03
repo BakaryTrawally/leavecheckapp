@@ -50,7 +50,8 @@ function Dashboard() {
   // background images 
   const [index, setIndex] = useState(0);
 
-  const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
+  // const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
+  const images = [bg1];
 
   useEffect(() => {
     const interval = setInterval(() => {
